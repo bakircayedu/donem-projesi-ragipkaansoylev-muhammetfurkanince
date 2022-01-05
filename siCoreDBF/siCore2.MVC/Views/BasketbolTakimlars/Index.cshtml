@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiCORE</title>
+   
+
+    <script type="text/javascript" src="scripts.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+
+    @model IEnumerable<siCoreDBF3.DAL.Model.BasketbolTakimlar>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    
+    <h3 class="tableName">BASKETBOL TAKIMLARI</h3>
+
+
+   
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+
+                <tr>
+                    <th id="hider"></th>
+                    <th id="hider"></th>
+                    <th id="hider"></th>
+                    <th id="createBTN"><a  asp-action="Create">Yeni Takım Oluştur</a></th>
+
+
+
+                </tr>
+
+
+                <tr>
+                    <th> TAKIM ADI</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  
+
+                </tr>
+            </thead>
+          
+
+
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td> @Html.DisplayFor(modelItem => item.TakimAdi)</td>
+                        <td> <a asp-action="Edit" asp-route-id="@item.TakimId">Takım Düzenle</a></td>
+                        <td> <a asp-action="Details" asp-route-id="@item.TakimId">Takım Bilgileri</a> </td>
+                        <td> <a asp-action="Delete" asp-route-id="@item.TakimId">Takımı Sil</a> </td>
+
+                    </tr>
+                }
+            <tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

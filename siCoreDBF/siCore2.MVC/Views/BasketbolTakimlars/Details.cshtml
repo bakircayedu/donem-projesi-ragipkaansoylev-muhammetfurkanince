@@ -1,0 +1,103 @@
+﻿@model siCoreDBF3.DAL.Model.BasketbolTakimlar
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="divCenter">
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="loginbox">
+            <h1>Takım Bilgileri</h1>
+
+
+
+            <dl>
+
+                <dt class="un-pw">
+                    @Html.DisplayNameFor(model => model.TakimId)
+                </dt>
+                <dt class="un-pw">
+                    @Html.DisplayFor(model => model.TakimId)
+                </dt>
+
+
+                <dt class="un-pw">
+                    @Html.DisplayNameFor(model => model.TakimAdi)
+                </dt>
+                <dt class="un-pw">
+                    @Html.DisplayFor(model => model.TakimAdi)
+                </dt>
+
+            </dl>
+
+
+
+    </form>
+
+</div>
+<p><a asp-action="Index">Listeye Geri Dön</a></p>
+
+
+<style>
+
+
+    .loginbox {
+        width: 300px;
+        border-radius: 6px;
+        margin: 0 auto 0 auto;
+        padding: 0px 0px 70px 0px;
+    }
+
+
+    .un-t {
+        display: flex;
+    }
+
+    .loginbox h1 {
+        margin-top: 30px;
+    }
+
+    .un-pw {
+        background: white;
+        border-bottom: black 3px ridge;
+        padding: 8px;
+        width: 250px;
+        color: black;
+        margin-top: 20px;
+        font-size: 1em;
+        border-radius: 100px;
+        box-shadow: 1em 1em 0 0 rgba(0,0,0,.2);
+    }
+
+    .button {
+        width: 125px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: black;
+        border-radius: 100px;
+        border: black 1px solid;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        float: left;
+        margin-left: 88px;
+        font-weight: 800;
+        font-size: 0.8em;
+        cursor: pointer;
+        box-shadow: 1em 1em 0 0 rgba(0,0,0,.2);
+    }
+
+
+    .divCenter {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 400px;
+        height: 300px;
+        text-align: center;
+    }
+</style>

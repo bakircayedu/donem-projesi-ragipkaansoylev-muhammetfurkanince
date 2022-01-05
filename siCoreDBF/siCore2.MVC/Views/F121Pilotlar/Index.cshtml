@@ -1,0 +1,53 @@
+﻿@model IEnumerable<siCoreDBF3.DAL.Model.F121Pilotlar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="tableName"> FORMULA 1 2021 PİLOTLAR SIRALAMASI</h3>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                 <th>PILOT</th>
+                <th>TAKIM</th>
+                <th>GALIBIYET</th>
+                <th>POLE</th>
+                <th>PODYUM</th>
+                <th>PUAN</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+
+
+            @foreach (var item in Model)
+            {
+                <tr> 
+                <td>
+                        @Html.DisplayFor(modelItem => item.Pilot.PilotName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Takim.TakimAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Win)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PolePosition)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Podium)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Puan)
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>

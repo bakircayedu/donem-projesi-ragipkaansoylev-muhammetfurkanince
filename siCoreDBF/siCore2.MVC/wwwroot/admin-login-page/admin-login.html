@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli Giriş</title>
+  <link rel="stylesheet" href="admin-login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+ 
+
+</head>
+<body>
+    <h1>siCORE</h1>
+
+
+    <div class="divCenter">
+        <form action="#" method="post">
+            <div class="loginbox">
+
+                <input id="username" class="un-pw" name="username" type="text" placeholder="Kullanıcı Adı:">
+
+
+                <input id="password" class="un-pw" name="password" type="password" placeholder="Şifre:">
+                <input class="button" onclick="girisKontrol(username, password)" type="button" value="Giriş Yap">
+            </div>
+        </form>
+        <p>Kullanıcı adı yerine "admin", şifre yerine "123" girilmelidir!</p>
+    </div>
+
+
+    <script>
+
+
+
+        function girisKontrol(kullanici, sifre) {
+            var kullanici = document.getElementById("username").value;
+            var sifre = document.getElementById("password").value;
+
+
+            if (kullanici == "admin") {
+                if (sifre == "123") {
+                    alert("Giriş Yapıldı");
+                    window.location.replace("https://localhost:44396/Futbol2122SezonTr1");
+                    return true;
+                }
+
+
+            }
+            else if (kullanici = !"admin") {
+                if (sifre == "123") {
+                    alert("Kullanıcı Adı Yalnış");
+                    return false;
+                }
+            }
+            else if (kullanici == "admin") {
+                if (sifre = !"123") {
+                    alert("Şifreniz Yalnış");
+                    return false;
+                }
+            }
+            else {
+                alert("Şifre ve Kullanıcı adı yanlış");
+                return false;
+            }
+        }
+
+
+        const target = window.document.getElementsByTagName('h1')[0]
+
+        const flickerLetter = letter => `<span style="animation: text-flicker-in-glow ${Math.random() * 4}s linear both ">${letter}</span>`
+        const colorLetter = letter => `<span style="color: hsla(${Math.random() * 360}, 100%, 80%, 1);">${letter}</span>`;
+        const flickerAndColorText = text =>
+            text
+                .split('')
+                .map(flickerLetter)
+                .map(colorLetter)
+                .join('');
+        const neonGlory = target => target.innerHTML = flickerAndColorText(target.textContent);
+
+
+        neonGlory(target);
+        target.onclick = ({ target }) => neonGlory(target);
+
+    </script>
+
+
+
+</body>
+</html>

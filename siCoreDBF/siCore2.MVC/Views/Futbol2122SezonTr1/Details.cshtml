@@ -1,0 +1,66 @@
+﻿@model siCoreDBF3.DAL.Model.Futbol2122SezonTr
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Futbol2122SezonTr</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimGalibiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimGalibiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimMaglubiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimMaglubiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimBeraberlik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimBeraberlik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimAtılanGol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimAtılanGol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimYenilenGol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimYenilenGol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimAveraj)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimAveraj)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimPuan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimPuan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Takim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Takim.TakimAdi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TakimId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,49 @@
+﻿@model siCoreDBF3.DAL.Model.Futbolcular2021Tr
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Futbolcular2021Tr</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TakimId" class="control-label"></label>
+                <select asp-for="TakimId" class="form-control" asp-items="ViewBag.TakimId"></select>
+                <span asp-validation-for="TakimId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="FutbolcuId" />
+            <div class="form-group">
+                <label asp-for="FutbolcuIsim" class="control-label"></label>
+                <input asp-for="FutbolcuIsim" class="form-control" />
+                <span asp-validation-for="FutbolcuIsim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AtilanGol" class="control-label"></label>
+                <input asp-for="AtilanGol" class="form-control" />
+                <span asp-validation-for="AtilanGol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YapilanAsist" class="control-label"></label>
+                <input asp-for="YapilanAsist" class="form-control" />
+                <span asp-validation-for="YapilanAsist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

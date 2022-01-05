@@ -1,0 +1,13 @@
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\bin\Debug\netcoreapp3.1\siCoreDBF3.DAL.deps.json
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\bin\Debug\netcoreapp3.1\siCoreDBF3.DAL.runtimeconfig.json
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\bin\Debug\netcoreapp3.1\siCoreDBF3.DAL.runtimeconfig.dev.json
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\bin\Debug\netcoreapp3.1\siCoreDBF3.DAL.dll
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\bin\Debug\netcoreapp3.1\siCoreDBF3.DAL.pdb
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.AssemblyInfoInputs.cache
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.AssemblyInfo.cs
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.csproj.CoreCompileInputs.cache
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.dll
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.pdb
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.genruntimeconfig.cache
+C:\Users\kaans\source\repos\siCoreDBF\siCoreDBF3.DAL\obj\Debug\netcoreapp3.1\siCoreDBF3.DAL.csproj.AssemblyReference.cache

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "siCoreDBF3.DAL", "siCoreDBF3.DAL\siCoreDBF3.DAL.csproj", "{C89A2396-03FD-4141-851F-1D43B0C56879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "siCore2.MVC", "siCore2.MVC\siCore2.MVC.csproj", "{27254C7A-2CA9-4B80-9AEB-515476D45470}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C89A2396-03FD-4141-851F-1D43B0C56879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C89A2396-03FD-4141-851F-1D43B0C56879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C89A2396-03FD-4141-851F-1D43B0C56879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C89A2396-03FD-4141-851F-1D43B0C56879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27254C7A-2CA9-4B80-9AEB-515476D45470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27254C7A-2CA9-4B80-9AEB-515476D45470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27254C7A-2CA9-4B80-9AEB-515476D45470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27254C7A-2CA9-4B80-9AEB-515476D45470}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14EBA0E9-EECF-4C2B-BA0C-4C7CE2595DF9}
+	EndGlobalSection
+EndGlobal

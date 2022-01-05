@@ -1,0 +1,124 @@
+﻿
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiCORE</title>
+
+
+
+   
+
+    <script type="text/javascript" src="scripts.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+   
+
+
+    @model IEnumerable<siCoreDBF3.DAL.Model.Futbol2122SezonTr>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+
+    <h3 class="tableName">2021/200 SÜPER LİG PUAN DURUMU GÜNCELLEME</h3>
+
+
+
+    <div class="table-wrapper">
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                Takım Düzenleme
+
+            </button>
+            <div class="dropdown-content">
+                <a asp-area="" asp-controller="BasketbolTakimlars"
+                   asp-action="Index">Basketbol Takımları</a>
+                <a asp-area="" asp-controller="FutbolTakimlars"
+                   asp-action="Index">Futbol Takımları</a>
+            </div>
+        </div>
+        <table class="fl-table">
+            <thead>
+
+
+
+                <tr>
+                    <th>
+                        Takım
+                    </th>
+                    <th>
+                        G
+                    </th>
+                    <th>
+                        M
+                    </th>
+                    <th>
+                        B
+                    </th>
+                    <th>
+                        AG
+                    </th>
+                    <th>
+                        YG
+                    </th>
+                    <th>
+                        AV
+                    </th>
+                    <th>
+                        P
+                    </th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+
+
+
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+
+                        <td> @Html.DisplayFor(modelItem => item.Takim.TakimAdi)</td>
+                        <td> @Html.DisplayFor(modelItem => item.TakimGalibiyet)</td>
+                        <td> @Html.DisplayFor(modelItem => item.TakimMaglubiyet)</td>
+                        <td> @Html.DisplayFor(modelItem => item.TakimBeraberlik)</td>
+                        <td>    @Html.DisplayFor(modelItem => item.TakimAtılanGol)</td>
+                        <td> @Html.DisplayFor(modelItem => item.TakimYenilenGol)</td>
+                        <td> @Html.DisplayFor(modelItem => item.TakimAveraj)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TakimPuan)</td>
+                        <td> <a asp-action="Edit" asp-route-id="@item.TakimId">Takım Düzenle</a></td>
+                        <td> <a asp-action="Details" asp-route-id="@item.TakimId">Takım Bilgileri</a> </td>
+                    </tr>
+                }
+            <tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

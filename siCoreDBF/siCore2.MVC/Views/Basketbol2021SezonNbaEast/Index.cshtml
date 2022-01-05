@@ -1,0 +1,91 @@
+﻿@model IEnumerable<siCoreDBF3.DAL.Model.Basketbol2021SezonNbaEast>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="tableName">2020/2021 NBA EAST PUAN DURUMU</h3>
+
+
+
+
+
+
+
+<div class="table-wrapper">
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+
+            20/21
+        </button>
+        <div class="dropdown-content">
+            <a asp-area="" asp-controller="Basketbol1920SezonNbaEast"
+               asp-action="Index">19/20 Sezonu Doğu</a>
+            <a asp-area="" asp-controller="Basketbol1920SezonNbaWest"
+               asp-action="Index">19/20 Sezonu Batı</a>
+
+            <a asp-area="" asp-controller="Basketbol2021SezonNbaEast"
+               asp-action="Index">20/21 Sezonu Doğu</a>
+            <a asp-area="" asp-controller="Basketbol2021SezonNbaWest"
+               asp-action="Index">20/21 Sezonu Batı</a>
+
+            <a asp-area="" asp-controller="Basketbol2122SezonNbaEast"
+               asp-action="Index">21/22 Sezonu Doğu</a>
+            <a asp-area="" asp-controller="Basketbol2122SezonNbaWest"
+               asp-action="Index">21/22 Sezonu Batı</a>
+
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            İstatistik
+
+        </button>
+        <div class="dropdown-content">
+            <a asp-area="" asp-controller="Basketbolcular2021NbaEast"
+               asp-action="Index">Sayı Ortalamaları</a>
+            <a asp-area="" asp-controller="Basketbolcular2021NbaEast"
+               asp-action="Index2">Asist Ortalamaları</a>
+
+        </div>
+    </div>
+
+
+
+
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>TAKIM </th>
+                <th> G</th>
+                <th>M</th>
+
+                <th>A</th>
+                <th>Y</th>
+                <th>AV</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Takim.TakimAdi)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimGalibiyet)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimMaglubiyet)</td>
+
+                    <td>    @Html.DisplayFor(modelItem => item.TakimAtılanBasket)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimYenilenBasket)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimAveraj)</td>
+
+                </tr>
+            }
+        <tbody>
+    </table>
+</div>

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - siCore2.MVC</title>
+
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1 class="logo">siCORE</h1>
+    <header>
+        <nav class="main-nav">
+
+
+
+            <ul class="navlinks">
+
+                <div class="dropdown">
+                    <button class="dropbtn btn">
+                        Futbol
+
+                    </button>
+                    <div class="dropdown-content">
+                        <a asp-area="" asp-controller="Futbol2122SezonEng"
+                           asp-action="Index">Premier Lig</a>
+                        <a asp-area="" asp-controller="Futbol2122SezonTr"
+                           asp-action="Index">Türkiye Süper Lig</a>
+
+
+
+                        <a asp-area="" asp-controller="Futbol2122SezonIta"
+                           asp-action="Index">İtalya Serie A</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn btn">
+                        Basketbol
+
+                    </button>
+                    <div class="dropdown-content">
+
+                        <a asp-area="" asp-controller="Basketbol2122SezonTr"
+                           asp-action="Index">Türkiye Basketbol Ligi</a>
+                        <a asp-area="" asp-controller="Basketbol2122SezonNbaEast"
+                           asp-action="Index"> NBA</a>
+                        <a asp-area="" asp-controller="Basketbol2122SezonEuro"
+                           asp-action="Index">Euroleague</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+
+
+
+                    <a asp-area="" asp-controller="F121Takimlar"
+                       asp-action="Index">
+                        <button class="dropbtn">
+                            FORMULA 1
+
+                        </button>
+                    </a>
+
+
+                </div>
+
+            </ul>
+
+
+        </nav>
+    </header>
+
+
+
+    <div class="footer">
+        <div id="button"></div>
+        <div id="container">
+            <div id="cont">
+                <div class="footer_center">
+
+
+
+                    <a href="~/admin-login-page/admin-login.html">
+
+                        <h3>Admin Paneli</h3>
+
+
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+    const target = window.document.getElementsByTagName('h1')[0]
+
+        const flickerLetter = letter => `<span style="animation: text-flicker-in-glow ${Math.random() * 4}s linear both ">${letter}</span>`
+        const colorLetter = letter => `<span style="color: hsla(${Math.random() * 360}, 100%, 80%, 1);">${letter}</span>`;
+        const flickerAndColorText = text =>
+            text
+                .split('')
+                .map(flickerLetter)
+                .map(colorLetter)
+                .join('');
+        const neonGlory = target => target.innerHTML = flickerAndColorText(target.textContent);
+
+
+        neonGlory(target);
+        target.onclick = ({ target }) => neonGlory(target);</script>
+
+
+
+
+
+    @RenderBody()
+
+
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

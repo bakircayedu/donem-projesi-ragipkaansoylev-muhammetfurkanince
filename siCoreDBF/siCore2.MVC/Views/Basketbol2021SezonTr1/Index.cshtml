@@ -1,0 +1,71 @@
+﻿@model IEnumerable<siCoreDBF3.DAL.Model.Basketbol2021SezonTr>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TakimGalibiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakimMaglubiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakimAtılanBasket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakimYenilenBasket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakimAveraj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TakimPuan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Takim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakimGalibiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakimMaglubiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakimAtılanBasket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakimYenilenBasket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakimAveraj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TakimPuan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Takim.TakimId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TakimId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TakimId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TakimId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

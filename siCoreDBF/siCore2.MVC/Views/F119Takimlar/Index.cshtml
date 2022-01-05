@@ -1,0 +1,75 @@
+﻿@model IEnumerable<siCoreDBF3.DAL.Model.F119Takimlar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="tableName"> FORMULA 1 2019TAKIMLAR SIRALAMASI</h3>
+
+
+
+
+
+
+
+<div class="table-wrapper">
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+
+            2019
+        </button>
+        <div class="dropdown-content">
+            <a asp-area="" asp-controller="F119Takimlar"
+               asp-action="Index">2019 Sezonu</a>
+            <a asp-area="" asp-controller="F120Takimlar"
+               asp-action="Index">2020 Sezonu</a>
+            <a asp-area="" asp-controller="F121Takimlar"
+               asp-action="Index">2021 Sezonu</a>
+        </div>
+    </div>
+
+
+
+    <div class="dropdown">
+
+
+
+        <a asp-area="" asp-controller="F119Pilotlar"
+           asp-action="Index">
+            <button class="dropbtn">
+                Pilotlar 
+
+            </button>
+        </a>
+
+
+    </div>
+
+
+
+
+
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>TAKIM </th>
+                <th> PUAN</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Takim.TakimAdi)</td>
+
+                    <td>@Html.DisplayFor(modelItem => item.TakimPuan)</td>
+                </tr>
+            }
+        <tbody>
+    </table>
+</div>

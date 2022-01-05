@@ -1,0 +1,80 @@
+﻿@model IEnumerable<siCoreDBF3.DAL.Model.Basketbol2021SezonTr>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="tableName">2020/2021 BASKETBOL SÜPER LİGİ PUAN DURUMU</h3>
+
+
+
+
+
+
+
+<div class="table-wrapper">
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+
+            20/21
+        </button>
+        <div class="dropdown-content">
+            <a asp-area="" asp-controller="Basketbol1920SezonTr"
+               asp-action="Index">19/20 Sezonu</a>
+            <a asp-area="" asp-controller="Basketbol2021SezonTr"
+               asp-action="Index">20/21 Sezonu</a>
+            <a asp-area="" asp-controller="Basketbol2122SezonTr"
+               asp-action="Index">21/22 Sezonu</a>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            İstatistik
+
+        </button>
+        <div class="dropdown-content">
+            <a asp-area="" asp-controller="Basketbolcular2021Tr"
+               asp-action="Index">Sayı Ortalamaları</a>
+            <a asp-area="" asp-controller="Basketbolcular2021Tr"
+               asp-action="Index2">Asist Ortalamaları</a>
+
+        </div>
+    </div>
+
+
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>TAKIM </th>
+                <th> G</th>
+                <th>M</th>
+
+                <th>A</th>
+                <th>Y</th>
+                <th>AV</th>
+                <th>P</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Takim.TakimAdi)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimGalibiyet)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimMaglubiyet)</td>
+
+                    <td>    @Html.DisplayFor(modelItem => item.TakimAtılanBasket)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimYenilenBasket)</td>
+                    <td> @Html.DisplayFor(modelItem => item.TakimAveraj)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TakimPuan)</td>
+                </tr>
+            }
+        <tbody>
+    </table>
+</div>

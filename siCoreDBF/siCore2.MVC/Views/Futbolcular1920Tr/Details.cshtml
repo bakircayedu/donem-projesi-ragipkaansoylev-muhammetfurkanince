@@ -1,0 +1,42 @@
+﻿@model siCoreDBF3.DAL.Model.Futbolcular1920Tr
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Futbolcular1920Tr</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FutbolcuIsim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FutbolcuIsim)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AtilanGol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AtilanGol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.YapilanAsist)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.YapilanAsist)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Takim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Takim.TakimAdi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FutbolcuId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

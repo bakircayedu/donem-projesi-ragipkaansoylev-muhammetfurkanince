@@ -1,0 +1,60 @@
+﻿@model siCoreDBF3.DAL.Model.Basketbol1920SezonEuro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Basketbol1920SezonEuro</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimGalibiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimGalibiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimMaglubiyet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimMaglubiyet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimAtılanBasket)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimAtılanBasket)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimYenilenBasket)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimYenilenBasket)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimAveraj)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimAveraj)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TakimPuan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TakimPuan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Takim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Takim.TakimId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TakimId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

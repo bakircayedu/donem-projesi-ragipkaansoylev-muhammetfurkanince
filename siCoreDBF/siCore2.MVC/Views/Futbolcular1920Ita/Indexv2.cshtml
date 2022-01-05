@@ -1,0 +1,36 @@
+﻿@model IEnumerable<siCoreDBF3.DAL.Model.Futbolcular1920Ita>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="tableName">2019/2020 ASİST KRALLIĞI</h3>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>Futbolcu</th>
+                <th>Asist Sayısı</th>
+                <th>Takım</th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FutbolcuIsim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YapilanAsist)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Takim.TakimAdi)
+                </td>
+
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
